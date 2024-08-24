@@ -1,1 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  display: inline-block;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  height: 140px;
+  width: 100px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+}
+
+.card.red {
+  color: red;
+}
+
+.card.black {
+  color: black;
+}
+
+.top-suit,
+.bottom-suit {
+  position: absolute;
+  font-size: 24px;
+}
+
+.top-suit {
+  top: 5px;
+  left: 5px;
+}
+
+.bottom-suit {
+  bottom: 5px;
+  right: 5px;
+}
+
+.number {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: bold;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  margin-bottom: 20px;
+}

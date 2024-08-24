@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generador de Cartas Aleatorias</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <style>
+      .card {
+        width: 100px;
+        height: 140px;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        font-size: 24px;
+        text-align: center;
+      }
+      .red {
+        color: red;
+      }
+      .black {
+        color: black;
+      }
+      .card-row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .step {
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container">
+      <h1><b>Generador y Clasificación de Cartas</b></h1>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="numCards" class="h3">
+            Cantidad de cartas:
+          </label>
+          <input type="number" id="numCards" class="form-control" />
+
+          <button
+            id="generateCardsButton"
+            class="btn btn-primary btn-block mt-2"
+          >
+            Generar Cartas
+          </button>
+
+          <button id="sortCardsButton" class="btn btn-primary btn-block mt-2">
+            Ordenar Cartas
+          </button>
+        </div>
+
+        <div class="col-md-8">
+          <div id="cardsContainer" class="row"></div>
+          <div id="stepsContainer"></div>
+        </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
